@@ -142,39 +142,39 @@
                 <h2 class="text-4xl md:text-5xl font-bold text-brand-dark">మా ప్రత్యేక సేవలు</h2>
                 <p class="text-lg text-brand-accent mt-2">మీ ప్రతి అవసరానికి, మా దగ్గర పరిష్కారం ఉంది</p>
             </div>
-            <div class="grid grid-cols-2 lg:grid-cols-3 gap-6 md:gap-10">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Service Card -->
-                <div class="service-card bg-white p-8 rounded-xl card-shadow transform hover:-translate-y-2 transition-transform duration-300 cursor-pointer">
+                <div class="service-card bg-white p-6 sm:p-8 rounded-xl card-shadow transform hover:-translate-y-2 transition-transform duration-300 cursor-pointer">
                     <h3 class="text-2xl font-bold text-brand-dark mb-3">సారె సామాన్లు (మా ప్రత్యేకత)</h3>
                     <p class="text-gray-600 mb-4">మీ కుమార్తె వివాహాన్ని ఒక మధుర జ్ఞాపకంగా మార్చండి. మీ గౌరవానికి ప్రతీకగా, అందరినీ ఆకట్టుకునేలా అద్భుతమైన సారె సామాన్లు అందిస్తాము.</p>
                     <a href="#contact" class="details-link hidden font-bold text-brand-accent hover:underline">మరిన్ని వివరాలకు &rarr;</a>
                 </div>
                 <!-- Service Card -->
-                <div class="service-card bg-white p-8 rounded-xl card-shadow transform hover:-translate-y-2 transition-transform duration-300 cursor-pointer">
+                <div class="service-card bg-white p-6 sm:p-8 rounded-xl card-shadow transform hover:-translate-y-2 transition-transform duration-300 cursor-pointer">
                     <h3 class="text-2xl font-bold text-brand-dark mb-3">హోమ్ ఫర్నిచర్</h3>
                     <p class="text-gray-600">సోఫాలు, మంచాలు, డైనింగ్ టేబుళ్లు... మీ ఇంటికి జీవం పోసే ప్రతి వస్తువును శ్రద్ధతో తయారు చేస్తాము.</p>
                     <a href="#contact" class="details-link hidden font-bold text-brand-accent hover:underline">మరిన్ని వివరాలకు &rarr;</a>
                 </div>
                 <!-- Service Card -->
-                <div class="service-card bg-white p-8 rounded-xl card-shadow transform hover:-translate-y-2 transition-transform duration-300 cursor-pointer">
+                <div class="service-card bg-white p-6 sm:p-8 rounded-xl card-shadow transform hover:-translate-y-2 transition-transform duration-300 cursor-pointer">
                     <h3 class="text-2xl font-bold text-brand-dark mb-3">తలుపులు & ద్వారబంధాలు</h3>
                     <p class="text-gray-600">మీ ఇంటికి రాజసాన్ని, భద్రతను ఇచ్చే ధృడమైన టేకు తలుపులు, కళాత్మకమైన ద్వారబంధాలు.</p>
                     <a href="#contact" class="details-link hidden font-bold text-brand-accent hover:underline">మరిన్ని వివరాలకు &rarr;</a>
                 </div>
                 <!-- Service Card -->
-                 <div class="service-card bg-white p-8 rounded-xl card-shadow transform hover:-translate-y-2 transition-transform duration-300 cursor-pointer">
+                 <div class="service-card bg-white p-6 sm:p-8 rounded-xl card-shadow transform hover:-translate-y-2 transition-transform duration-300 cursor-pointer">
                     <h3 class="text-2xl font-bold text-brand-dark mb-3">ఆఫీస్ ఫర్నిచర్</h3>
                     <p class="text-gray-600">మీ ఆఫీస్‌కు ప్రొఫెషనల్ లుక్ ఇచ్చే టేబుల్స్, కుర్చీలు, మరియు కప్‌బోర్డులు తయారు చేస్తాము.</p>
                     <a href="#contact" class="details-link hidden font-bold text-brand-accent hover:underline">మరిన్ని వివరాలకు &rarr;</a>
                 </div>
                 <!-- Service Card -->
-                <div class="service-card bg-white p-8 rounded-xl card-shadow transform hover:-translate-y-2 transition-transform duration-300 cursor-pointer">
+                <div class="service-card bg-white p-6 sm:p-8 rounded-xl card-shadow transform hover:-translate-y-2 transition-transform duration-300 cursor-pointer">
                     <h3 class="text-2xl font-bold text-brand-dark mb-3">కస్టమ్ డిజైన్లు</h3>
                     <p class="text-gray-600">మీ మనసులోని ఆలోచనకు మా నైపుణ్యాన్ని జోడించి, మీ కలల ఫర్నిచర్‌ను తయారు చేస్తాము.</p>
                     <a href="#contact" class="details-link hidden font-bold text-brand-accent hover:underline">మరిన్ని వివరాలకు &rarr;</a>
                 </div>
                 <!-- Service Card -->
-                 <div class="service-card bg-white p-8 rounded-xl card-shadow transform hover:-translate-y-2 transition-transform duration-300 cursor-pointer">
+                 <div class="service-card bg-white p-6 sm:p-8 rounded-xl card-shadow transform hover:-translate-y-2 transition-transform duration-300 cursor-pointer">
                     <h3 class="text-2xl font-bold text-brand-dark mb-3">పాలిషింగ్ & రిపేర్</h3>
                     <p class="text-gray-600">మీ పాత ఫర్నిచర్‌కు కొత్త జీవితాన్ని ఇస్తాము. కొత్తవాటిలా మెరిపిస్తాము.</p>
                     <a href="#contact" class="details-link hidden font-bold text-brand-accent hover:underline">మరిన్ని వివరాలకు &rarr;</a>
@@ -355,6 +355,9 @@
                     });
 
                     if (!response.ok) {
+                        // More robust error handling: try to get text from the response body
+                        const errorBody = await response.text();
+                        console.error("API request failed with status:", response.status, "Body:", errorBody);
                         throw new Error(`API Error: ${response.statusText}`);
                     }
 
@@ -370,8 +373,7 @@
                     } else {
                         throw new Error('No content received from AI.');
                     }
-                } catch (error)
-                 {
+                } catch (error) {
                     console.error('Error fetching AI response:', error);
                     aiResponseDiv.innerText = 'క్షమించండి, ప్రస్తుతం మేము మీ అభ్యర్థనను ప్రాసెస్ చేయలేకపోతున్నాము. దయచేసి కాసేపటి తర్వాత ప్రయత్నించండి.';
                 } finally {

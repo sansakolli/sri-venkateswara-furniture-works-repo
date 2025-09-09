@@ -142,33 +142,42 @@
                 <h2 class="text-4xl md:text-5xl font-bold text-brand-dark">మా ప్రత్యేక సేవలు</h2>
                 <p class="text-lg text-brand-accent mt-2">మీ ప్రతి అవసరానికి, మా దగ్గర పరిష్కారం ఉంది</p>
             </div>
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
-                <!-- Special Service -->
-                <div class="bg-white p-8 rounded-xl card-shadow border-t-4 border-yellow-500 transform hover:-translate-y-2 transition-transform duration-300">
+            <div class="grid grid-cols-2 lg:grid-cols-3 gap-6 md:gap-10">
+                <!-- Service Card -->
+                <div class="service-card bg-white p-8 rounded-xl card-shadow transform hover:-translate-y-2 transition-transform duration-300 cursor-pointer">
                     <h3 class="text-2xl font-bold text-brand-dark mb-3">సారె సామాన్లు (మా ప్రత్యేకత)</h3>
                     <p class="text-gray-600 mb-4">మీ కుమార్తె వివాహాన్ని ఒక మధుర జ్ఞాపకంగా మార్చండి. మీ గౌరవానికి ప్రతీకగా, అందరినీ ఆకట్టుకునేలా అద్భుతమైన సారె సామాన్లు అందిస్తాము.</p>
-                    <a href="#contact" class="font-bold text-brand-accent hover:underline">మరిన్ని వివరాలకు &rarr;</a>
+                    <a href="#contact" class="details-link hidden font-bold text-brand-accent hover:underline">మరిన్ని వివరాలకు &rarr;</a>
                 </div>
-                <!-- Other Services -->
-                <div class="bg-white p-8 rounded-xl card-shadow transform hover:-translate-y-2 transition-transform duration-300">
+                <!-- Service Card -->
+                <div class="service-card bg-white p-8 rounded-xl card-shadow transform hover:-translate-y-2 transition-transform duration-300 cursor-pointer">
                     <h3 class="text-2xl font-bold text-brand-dark mb-3">హోమ్ ఫర్నిచర్</h3>
                     <p class="text-gray-600">సోఫాలు, మంచాలు, డైనింగ్ టేబుళ్లు... మీ ఇంటికి జీవం పోసే ప్రతి వస్తువును శ్రద్ధతో తయారు చేస్తాము.</p>
+                    <a href="#contact" class="details-link hidden font-bold text-brand-accent hover:underline">మరిన్ని వివరాలకు &rarr;</a>
                 </div>
-                <div class="bg-white p-8 rounded-xl card-shadow transform hover:-translate-y-2 transition-transform duration-300">
+                <!-- Service Card -->
+                <div class="service-card bg-white p-8 rounded-xl card-shadow transform hover:-translate-y-2 transition-transform duration-300 cursor-pointer">
                     <h3 class="text-2xl font-bold text-brand-dark mb-3">తలుపులు & ద్వారబంధాలు</h3>
                     <p class="text-gray-600">మీ ఇంటికి రాజసాన్ని, భద్రతను ఇచ్చే ధృడమైన టేకు తలుపులు, కళాత్మకమైన ద్వారబంధాలు.</p>
+                    <a href="#contact" class="details-link hidden font-bold text-brand-accent hover:underline">మరిన్ని వివరాలకు &rarr;</a>
                 </div>
-                 <div class="bg-white p-8 rounded-xl card-shadow transform hover:-translate-y-2 transition-transform duration-300">
+                <!-- Service Card -->
+                 <div class="service-card bg-white p-8 rounded-xl card-shadow transform hover:-translate-y-2 transition-transform duration-300 cursor-pointer">
                     <h3 class="text-2xl font-bold text-brand-dark mb-3">ఆఫీస్ ఫర్నిచర్</h3>
                     <p class="text-gray-600">మీ ఆఫీస్‌కు ప్రొఫెషనల్ లుక్ ఇచ్చే టేబుల్స్, కుర్చీలు, మరియు కప్‌బోర్డులు తయారు చేస్తాము.</p>
+                    <a href="#contact" class="details-link hidden font-bold text-brand-accent hover:underline">మరిన్ని వివరాలకు &rarr;</a>
                 </div>
-                <div class="bg-white p-8 rounded-xl card-shadow transform hover:-translate-y-2 transition-transform duration-300">
+                <!-- Service Card -->
+                <div class="service-card bg-white p-8 rounded-xl card-shadow transform hover:-translate-y-2 transition-transform duration-300 cursor-pointer">
                     <h3 class="text-2xl font-bold text-brand-dark mb-3">కస్టమ్ డిజైన్లు</h3>
                     <p class="text-gray-600">మీ మనసులోని ఆలోచనకు మా నైపుణ్యాన్ని జోడించి, మీ కలల ఫర్నిచర్‌ను తయారు చేస్తాము.</p>
+                    <a href="#contact" class="details-link hidden font-bold text-brand-accent hover:underline">మరిన్ని వివరాలకు &rarr;</a>
                 </div>
-                 <div class="bg-white p-8 rounded-xl card-shadow transform hover:-translate-y-2 transition-transform duration-300">
+                <!-- Service Card -->
+                 <div class="service-card bg-white p-8 rounded-xl card-shadow transform hover:-translate-y-2 transition-transform duration-300 cursor-pointer">
                     <h3 class="text-2xl font-bold text-brand-dark mb-3">పాలిషింగ్ & రిపేర్</h3>
                     <p class="text-gray-600">మీ పాత ఫర్నిచర్‌కు కొత్త జీవితాన్ని ఇస్తాము. కొత్తవాటిలా మెరిపిస్తాము.</p>
+                    <a href="#contact" class="details-link hidden font-bold text-brand-accent hover:underline">మరిన్ని వివరాలకు &rarr;</a>
                 </div>
             </div>
         </div>
@@ -279,6 +288,32 @@
                 observer.observe(element);
             });
 
+            // Interactive Services Section Logic
+            const serviceCards = document.querySelectorAll('.service-card');
+
+            function updateSelectedCard(selectedCardEl) {
+                // First, reset all cards to their default state
+                serviceCards.forEach(card => {
+                    card.classList.remove('border-t-4', 'border-yellow-500');
+                    card.querySelector('.details-link').classList.add('hidden');
+                });
+
+                // Then, apply the active state to the selected card
+                selectedCardEl.classList.add('border-t-4', 'border-yellow-500');
+                selectedCardEl.querySelector('.details-link').classList.remove('hidden');
+            }
+
+            serviceCards.forEach(card => {
+                card.addEventListener('click', (event) => {
+                    updateSelectedCard(event.currentTarget);
+                });
+            });
+
+            // Make the first card active by default
+            if (serviceCards.length > 0) {
+                updateSelectedCard(serviceCards[0]);
+            }
+
             // Gemini API Feature
             const generateButton = document.getElementById('generateButton');
             const userInput = document.getElementById('userInput');
@@ -349,5 +384,4 @@
     </script>
 </body>
 </html>
-
 

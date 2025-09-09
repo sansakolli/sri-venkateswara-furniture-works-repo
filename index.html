@@ -49,7 +49,7 @@
         }
         
         .hero-bg {
-            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1600121848594-d8644e57abab?q=80&w=1974&auto=format=fit=crop');
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1598969445465-b3a75b7c4f4a?q=80&w=1974&auto=format=fit=crop');
         }
 
         .card-shadow {
@@ -186,7 +186,7 @@
     <!-- AI Design Assistant Section -->
     <section id="ai-designer" class="py-20 md:py-28 brand-light reveal-on-scroll">
         <div class="container mx-auto px-6 text-center">
-            <h2 class="text-4xl md:text-5xl font-bold text-brand-dark">AI డిజైన్ అసిస్టెంట్</h2>
+            <h2 class="text-4xl md:text-5xl font-bold text-brand-dark">✨ AI డిజైన్ అసిస్టెంట్</h2>
             <p class="text-lg text-brand-accent mt-2 mb-8">మీకు ఎలాంటి ఫర్నిచర్ కావాలో చెప్పండి, మేము కొన్ని అద్భుతమైన ఐడియాలు ఇస్తాము!</p>
             <div class="max-w-2xl mx-auto bg-white p-8 rounded-xl card-shadow">
                 <textarea id="userInput" class="w-full p-4 border border-gray-300 rounded-lg text-lg focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 transition" rows="4" placeholder="ఉదా: నా కొత్త ఇంటి హాల్ కోసం ఒక సాంప్రదాయ సోఫా సెట్ కావాలి..."></textarea>
@@ -205,14 +205,14 @@
     <section id="gallery" class="py-20 md:py-28 reveal-on-scroll">
         <div class="container mx-auto px-6">
             <h2 class="text-4xl md:text-5xl font-bold text-center mb-16 text-brand-dark">మా పనితనం, మీ కళ్ళతో చూడండి</h2>
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-                 <div class="overflow-hidden rounded-xl shadow-lg group col-span-2 row-span-2">
-                    <img src="https://placehold.co/800x800/AF8F6F/FFFFFF?text=సారె+సామాను" alt="సారె సామాను" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500">
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
+                 <div class="overflow-hidden rounded-xl shadow-lg group col-span-1 sm:col-span-2 md:col-span-2 row-span-2">
+                    <img src="https://images.unsplash.com/photo-1617806118233-5cf3b4681a8a?q=80&w=1974&auto=format=fit=crop" alt="సారె సామాను" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500">
                 </div>
-                <div class="overflow-hidden rounded-xl shadow-lg group"><img src="https://placehold.co/400x400/5D4037/FFFFFF?text=రాయల్+సోఫా" alt="రాయల్ సోఫా" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"></div>
-                <div class="overflow-hidden rounded-xl shadow-lg group"><img src="https://placehold.co/400x400/5D4037/FFFFFF?text=డిజైనర్+డోర్" alt="డిజైనర్ డోర్" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"></div>
-                <div class="overflow-hidden rounded-xl shadow-lg group"><img src="https://placehold.co/400x400/5D4037/FFFFFF?text=డైనింగ్+సెట్" alt="డైనింగ్ సెట్" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"></div>
-                <div class="overflow-hidden rounded-xl shadow-lg group"><img src="https://placehold.co/400x400/5D4037/FFFFFF?text=వివాహ+మంచం" alt="వివాహ మంచం" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"></div>
+                <div class="overflow-hidden rounded-xl shadow-lg group"><img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?q=80&w=2070&auto=format=fit=crop" alt="రాయల్ సోఫా" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"></div>
+                <div class="overflow-hidden rounded-xl shadow-lg group"><img src="https://images.unsplash.com/photo-1598969445465-b3a75b7c4f4a?q=80&w=1974&auto=format=fit=crop" alt="డిజైనర్ డోర్" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"></div>
+                <div class="overflow-hidden rounded-xl shadow-lg group"><img src="https://images.unsplash.com/photo-1604014237800-1c9102c219da?q=80&w=1974&auto=format=fit=crop" alt="డైనింగ్ సెట్" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"></div>
+                <div class="overflow-hidden rounded-xl shadow-lg group"><img src="https://images.unsplash.com/photo-1505693416388-ac5ce0687954?q=80&w=2070&auto=format=fit=crop" alt="వివాహ మంచం" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"></div>
             </div>
         </div>
     </section>
@@ -370,7 +370,8 @@
                     } else {
                         throw new Error('No content received from AI.');
                     }
-                } catch (error) {
+                } catch (error)
+                 {
                     console.error('Error fetching AI response:', error);
                     aiResponseDiv.innerText = 'క్షమించండి, ప్రస్తుతం మేము మీ అభ్యర్థనను ప్రాసెస్ చేయలేకపోతున్నాము. దయచేసి కాసేపటి తర్వాత ప్రయత్నించండి.';
                 } finally {
